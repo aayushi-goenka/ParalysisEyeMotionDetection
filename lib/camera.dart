@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -18,7 +17,6 @@ class Camera extends StatefulWidget {
 }
 
 class _CameraState extends State<Camera> with WidgetsBindingObserver {
-
   late CameraController controller;
   bool isDetecting = false;
 
@@ -38,7 +36,7 @@ class _CameraState extends State<Camera> with WidgetsBindingObserver {
       if (!mounted) {
         return;
       }
-      controller.startImageStream((CameraImage img) { 
+      controller.startImageStream((CameraImage img) {
         if (!isDetecting) {
           isDetecting = true;
           int startTime = DateTime.now().millisecondsSinceEpoch;
@@ -48,13 +46,14 @@ class _CameraState extends State<Camera> with WidgetsBindingObserver {
                   }).toList(),
                   imageHeight: img.height,
                   imageWidth: img.width,
-                  numResults: 5,)
+                  numResults: 1,
+                  threshold: 0.3,
+                  imageMean: 0,
+                  imageStd: 0.5)
               .then((recognitions) {
             int endTime = DateTime.now().millisecondsSinceEpoch;
             debugPrint("Detection took ${endTime - startTime}");
-
             widget.setRecognitions(recognitions!, img.height, img.width);
-
             isDetecting = false;
           });
         }
@@ -87,6 +86,7 @@ class _CameraState extends State<Camera> with WidgetsBindingObserver {
     if (!controller.value.isInitialized) {
       return const SpinKitDoubleBounce(
         color: Colors.grey,
+        size: 150,
       );
     }
 
