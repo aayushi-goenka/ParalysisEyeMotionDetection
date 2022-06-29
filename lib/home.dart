@@ -19,6 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<dynamic>? _recognitions;
+  List<String> gaugedResults = [];
   int _imageHeight = 0;
   int _imageWidth = 0;
   bool granted = false;
@@ -51,6 +52,10 @@ class _HomePageState extends State<HomePage> {
       _recognitions = recognitions;
       _imageHeight = imageHeight;
       _imageWidth = imageWidth;
+    });
+    _recognitions!.map((re) {
+      gaugedResults.add(re["label"]);
+      debugPrint(gaugedResults.length.toString());
     });
   }
 

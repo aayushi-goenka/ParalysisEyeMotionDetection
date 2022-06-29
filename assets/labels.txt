@@ -1,4 +1,4 @@
 Closed Eyes
-center_eyes_aug
-left_eyes_aug
-right_eyes_aug
+Center Eyes
+Left Eyes
+Right Eyes

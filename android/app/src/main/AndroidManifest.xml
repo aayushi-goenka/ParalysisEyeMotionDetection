@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testing">
+    package="com.example.testing"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="sq.flutter.tflite" />
    <application
         android:label="Noisiv"
         android:name="${applicationName}"
