@@ -11,3 +11,7 @@ Collected 30% facial images manually by taking pictures of known people such as 
 Thus, we have trained and tested our datasets on established models and compared their results.
 The model has given better performance when it is trained on the eyes dataset compared to the facial dataset.
  We built our custom model and have successfully deployed it which classifies the eye movement from a live camera feed with 69.3% accuracy
+
+
+https://user-images.githubusercontent.com/66373454/181106242-2ead020f-0302-460e-b0f3-299585b14b16.mp4
+
