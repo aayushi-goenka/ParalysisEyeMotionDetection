@@ -7,6 +7,7 @@ A model by which we can help paralysed people to communicate their needs better 
 Collected 70% facial images from online resources like Bing API and websites which provide such datasets
 
 Collected 30% facial images manually by taking pictures of known people such as friends and family with their written consent.
+The link to the dataset is mentioned as : https://drive.google.com/drive/folders/1kn3D3V7EQvmIFsFfSPTBQj3WmK6HVUiT?usp=sharing
 
 Thus, we have trained and tested our datasets on established models and compared their results.
 The model has given better performance when it is trained on the eyes dataset compared to the facial dataset.
